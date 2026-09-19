@@ -1,4 +1,4 @@
-# Input Template — Written Assignment
+# Input Template: Written Assignment
 
 Copy this, fill in the parts you have, and paste it into a new chat.
 You do not need to fill every field. Leave a field blank if it does not apply.
@@ -6,7 +6,7 @@ You do not need to fill every field. Leave a field blank if it does not apply.
 ---
 
 ## Mode
-A — Draft my assignment   /   B — Review my draft
+A: Draft my assignment   /   B: Review my draft
 (delete the one you do not want)
 
 ## Course / Discipline
@@ -17,17 +17,17 @@ A — Draft my assignment   /   B — Review my draft
 
 ```
 
-## Rubric (paste the full rubric)
-```
-
-```
-
 ## Assignment instructions and requirements (word count, format, headings, title page, due details)
 ```
 
 ```
 
-## Topic knowledge / course readings (this unit first; paste the text with page numbers, not just titles — concepts, authors, definitions, data)
+## Rubric (paste the full rubric)
+```
+
+```
+
+## Topic knowledge / course readings (this unit first; paste the text with page numbers, not just titles: concepts, authors, definitions, data)
 ```
 
 ```
@@ -37,12 +37,12 @@ A — Draft my assignment   /   B — Review my draft
 
 ```
 
-## My draft — Mode B only (paste your full draft here)
+## My draft: Mode B only (paste your full draft here)
 ```
 
 ```
 
-## Extra notes (optional — anything else the draft should follow)
+## Extra notes (optional: anything else the draft should follow)
 ```
 
 ```
