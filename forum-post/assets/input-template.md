@@ -12,14 +12,10 @@ Word count target: [e.g., 300–400 words]
 Replies needed: [Mode B only, e.g., 2]
 Minimum citations: [e.g., 2]
 Discipline: [e.g., business, education]
+Course: []
 ```
 
 ## Discussion question (paste the exact question)
-```
-
-```
-
-## Rubric (paste full rubric — include the highest-score column, since Mode A writes to that wording; include separate criteria for initial post and replies if they differ)
 ```
 
 ```
@@ -29,7 +25,17 @@ Discipline: [e.g., business, education]
 
 ```
 
-## Topic knowledge (lecture notes, readings, key concepts, authors, definitions, data, quotes with page numbers)
+## Rubric (paste full rubric — include the highest-score column, since Mode A writes to that wording; include separate criteria for initial post and replies if they differ)
+```
+
+```
+
+## Topic knowledge (this unit first; paste the text with page numbers, not just titles — lecture notes, readings, key concepts, authors, definitions, data)
+```
+
+```
+
+## My real example (optional — a real experience from work or life that fits the question; leave blank to get at least 3 story ideas)
 ```
 
 ```
@@ -52,6 +58,11 @@ Classmate 1:
 
 Classmate 2:
 
+
+```
+
+## My initial post — Mode B only (optional — paste it so replies can connect to it)
+```
 
 ```
 

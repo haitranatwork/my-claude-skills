@@ -12,5 +12,5 @@ Real rubrics vary. Treat this as a floor, not a ceiling. If the user later suppl
 | Original contribution | The post adds at least one idea, example, or angle that a classmate who did the readings would not already have. |
 | Engagement | The post ends with a genuine open question that gives classmates a real opening to reply. |
 | Writing quality | Clear and organized. Correct grammar and spelling. One idea per sentence, one topic per paragraph. |
-| APA 7 | In-text citations and the References list are correctly formatted and match each other. Direct quotes carry page numbers. |
+| APA 7 | In-text citations and the References list are correctly formatted and match each other. Citations carry page numbers where the source has them, and direct quotes always do. |
 | Requirements | Word count, citation minimum, title, and any formatting rule are all met. |

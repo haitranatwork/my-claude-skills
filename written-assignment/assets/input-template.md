@@ -27,12 +27,12 @@ A — Draft my assignment   /   B — Review my draft
 
 ```
 
-## Topic knowledge / course readings (concepts, authors, definitions, data, quotes with page numbers)
+## Topic knowledge / course readings (this unit first; paste the text with page numbers, not just titles — concepts, authors, definitions, data)
 ```
 
 ```
 
-## My context (my experience, examples I can use, anything personal to include)
+## My context (my real experience, examples I can use, anything personal to include; leave blank to get at least 3 story ideas in the plan)
 ```
 
 ```

@@ -20,23 +20,25 @@ The user supplies the variable parts each time, usually as a filled-in copy of `
 - a quick-fill header (mode, word count target, replies needed, minimum citations, discipline)
 - the rubric
 - the assignment instructions (word count, number of replies, deadline, formatting rules)
-- topic knowledge / course material (concepts, authors, definitions, data, quotes with page numbers)
+- topic knowledge / course material: this unit's readings first, pasted as text with page numbers, not just titles (concepts, authors, definitions, data, quotes)
 - the exact discussion question
 - for Mode B: the full classmate post(s), labeled Classmate 1, Classmate 2, etc.
 - for Mode C: the user's own draft
 - optional sample posts (use only for depth and structure, never to copy voice or wording)
+- optional: the user's real example (see Personal examples), and for Mode B the user's own initial post
 
 If the user hasn't pasted this content, point them to `assets/input-template.md` so they can fill it in.
 
 **Intake rules:**
 - If the user mentions file uploads but forgot to attach them, ask for the files before doing anything.
 - If a required part is empty (quick-fill header, rubric, assignment instructions, topic knowledge, or discussion question), ask the user to update it.
+- If the topic knowledge has only titles or author names, ask for the text (or the key passages with page numbers) before drafting. Never guess what a reading says.
 - If the user says they will run a mode later, confirm that everything is ready and wait. Do not execute any mode until they say which one to run.
-- Check the output against the quick-fill header numbers. Report the actual word count in the deliverable.
+- Check the output against the quick-fill header numbers. Report the actual word count of the post text only (without [EVIDENCE] blocks and tags) in the deliverable.
 
 **Before drafting, always read `references/voice-sample.md`.** It holds the user's real writing. Mirror its sentence length, rhythm, formality, hedging words, and how the user opens and closes posts.
 
-Only ask a clarifying question if something critical is missing: no rubric, no discussion question, no classmate post in Mode B, no draft in Mode C, or missing citation details. Otherwise proceed directly — the user prefers a finished result over questions.
+Only ask a clarifying question if something critical is missing: no rubric, no discussion question, no classmate post in Mode B, no draft in Mode C, topic knowledge with only titles or author names, or missing citation details. Otherwise proceed directly — the user prefers a finished result over questions.
 
 ## Language rules (strict — apply to every sentence)
 
@@ -51,25 +53,79 @@ The user writes at CEFR B1 level. This is the most important constraint. The dra
 
 ## APA 7 citation rules
 
-- In-text citations in APA 7 format: `(Author, Year)` or `Author (Year)`.
-- For a direct quote, add the page number: `(Author, Year, p. 12)`. Keep quotes short (under 40 words) and rare. Paraphrase when possible.
+- In-text citations in APA 7 format: `(Author, Year)` or `Author (Year)`, plus the location when the source has one: `(Author, Year, p. 12)`.
+- **Page numbers.** Add a page number to every citation when the source has one — for paraphrases too, not only quotes. If the source has no page numbers, use a paragraph number (`para. 4`), a section name, or a timestamp for videos. Never guess a page number. If it is missing, flag it with `[CHECK CITATION]`.
+- **Direct quotes** need quotation marks and a page number. Keep quotes short (under 40 words) and rare. Paraphrase when possible.
+- **Paraphrase check.** Paraphrase in new words. Compare each cited sentence with the source text, and rewrite any sentence that keeps the source's wording or sentence pattern.
+- **Cite what the user read.** If an original author's idea appears only through the textbook, use a secondary citation — `(Goleman, 1995, as cited in [Textbook Author], [Year])` — and list only the textbook in References.
 - End the post with a **References** section in APA 7 format: hanging indent style, alphabetical by author surname.
 - If a source is missing publication details, flag it with `[CHECK CITATION]`. Never invent author names, years, or page numbers.
-- **Source whitelist.** Only cite sources listed in the topic knowledge. If 1–2 outside sources would make the post stronger, do not add them silently — ask the user first and wait for confirmation.
+- **Source whitelist.** Cite sources from the topic knowledge. Outside sources follow "Source and evidence rules" below — never add them silently.
+
+## Source and evidence rules
+
+These rules decide what the draft may claim and where each claim comes from.
+
+**Course material first.** Use this order: the question's wording, this unit's readings, other course readings, outside sources.
+
+**The course version wins.** For definitions, terms, models, and formulas, use the course version. If another source or general knowledge says something different, name the difference in the text. Never contradict the readings silently — graders check claims against the course material.
+
+**General knowledge.** Use general knowledge for widely known background only, and mark it `[GENERAL KNOWLEDGE]`. Key definitions still come from the course. Specific numbers, dates, and study findings need a real source, because that is where invented details slip in. If the topic knowledge has none, mark the claim `[SOURCE NEEDED]`.
+
+**Outside sources.** Use them only when the question asks for them or they add something the readings do not, and only after the user agrees (an instruction to find outside sources counts as agreement). Never cite a source from memory. Find it with web search, or describe the kind of source needed. Mark each outside source `[VERIFY]` until the user has opened it. Web sources get [EVIDENCE] entries like any other source.
+
+**Recency (computer science).** For outside computer science sources on fast-changing topics, prefer the last 1–3 years and stay within 5 years. Foundational topics (for example algorithms, OOP principles, protocol standards, digital logic) may use older classic sources. Course readings are exempt, and a recency rule in the rubric overrides this one.
+
+**Numbers.** Never do statistics or arithmetic in your head. Use the user's own software output, or run the calculation with code and show the inputs. Mark anything unverified `[CHECK NUMBER]`.
+
+## Evidence blocks (Modes A and B)
+
+Under each paragraph of a draft, add an `[EVIDENCE]` block so the user can check every claim. For each sentence, or group of sentences with one idea, give the source, the location (page number, or paragraph, section, or timestamp), and a short exact quote that supports it.
+
+- Quotes come only from the pasted topic knowledge or the full text of a fetched web page — never from a search snippet or from memory.
+- Web sources also get the URL, and one short quote per source. The source's other sentences get the location only.
+- If the text is not available, write `not in available text, verify`.
+- Label sentences with no source as `[GENERAL KNOWLEDGE]`, `[MY EXPERIENCE]`, `[MY OPINION]`, or `[INVENTED - NEED TO VERIFY]`.
+
+Format (S1, S2… are the sentence numbers inside that paragraph):
+
+```
+[EVIDENCE]
+- S1–S2 (main idea in a few words): Author (Year), p. 12 — "short exact quote"
+- S3: Author (Year), para. 4, https://… — "short exact quote"
+- S4: [MY EXPERIENCE]
+- S5: [GENERAL KNOWLEDGE]
+```
+
+Deliver one version only: the draft with its [EVIDENCE] blocks and tags. Do not add a clean copy. Word counts and language checks cover the text only, without the blocks and tags.
+
+## Before you submit (end of every draft in Modes A and B)
+
+End the deliverable with this list, so nothing unchecked reaches the submission:
+- the references the user must open;
+- the `[GENERAL KNOWLEDGE]` sentences to cite, keep, or cut;
+- each `[INVENTED - NEED TO VERIFY]` story: keep it only if it matches what really happened, with the details fixed; otherwise replace it or cut it;
+- every open tag: `[SOURCE NEEDED]`, `[VERIFY]`, `[CHECK NUMBER]`, `[CHECK CITATION]`, `[ADD YOUR EXAMPLE]`;
+- a reminder to delete all [EVIDENCE] blocks and tags before submitting.
 
 ## Personal examples (do not invent silently)
 
 The user's posts often use a real personal or work example. Never invent one and present it as the user's without telling them. If a personal example would strengthen the post and none was given:
 1. Insert `[ADD YOUR EXAMPLE: what kind of example fits here]` in the draft, and
-2. Ask the user: do they want to supply a real example, or should you invent one for them to adapt?
+2. Below the draft, suggest at least 3 story ideas based on the user's profile and memory. Give each in a line or two: the situation, and the main idea it would show. The user can answer with a real example, "idea X happened" plus the real details, or "invent."
 
-If they say invent, write a realistic example that fits their background (software team leader at a SaaS company building a dealership management system) and mark it `[INVENTED — check and adjust details]`.
+If the user says invent, or chooses invent for an idea, write the story in first person as the user's experience. Draw on their profile and memory; if neither is available, use their background (software team leader at a SaaS company building a dealership management system). Mark it `[INVENTED - NEED TO VERIFY]`. Do not ask again — write it.
+
+Use the hypothetical style ("Imagine a team that…") only when the user asks for it.
+
+In the [EVIDENCE] block, label invented sentences `[INVENTED - NEED TO VERIFY]`, and list the story under "Before you submit".
 
 ## What makes a strong post (all modes)
 
 - **Take a clear position** in the first one or two sentences.
 - **Name the course material specifically** — the concept, author, or study. Do not write "the readings showed."
 - **Show critical thinking**: ask a question, compare two ideas, or apply a concept to a new example. Do not only agree with the source.
+- **No generic critique.** A limit that fits any theory ("may not apply to all cultures," "more research is needed") does not count. Name a specific condition where the idea fails.
 - **Give evidence**: after a claim, explain why with a reason, an example, or a citation.
 - **End with a real question** so the conversation can continue.
 - **Be honest about uncertainty**: "I am not sure if X, because…" is stronger than overclaiming.
@@ -123,7 +179,7 @@ Break the question into every part, including the small ones buried at the end (
 ### Step 3 — Hard gates
 
 These cap the grade no matter how good the writing is. Check them before handing anything over, and fix them rather than flagging them:
-- Word count inside the target range.
+- Word count inside the target range (post text only, without [EVIDENCE] blocks and tags).
 - At least the minimum number of citations.
 - Every in-text citation appears in References, and every reference is cited in the text.
 - Title present, and any formatting rule from the assignment followed.
@@ -164,13 +220,16 @@ Hand over the revised draft with the final table, not the first attempt with a l
 ### Mode A deliverable
 1. Any "on you" criteria (deadline, replies, participation across the week) listed first, in one line, so the user handles them.
 2. A title for the post, on the first line of the draft.
-3. The draft post, formatted as the user would submit it, with APA 7 in-text citations and a References list.
-4. The actual word count, checked against the target.
+3. The draft post, formatted as the user would submit it, with APA 7 in-text citations, a References list, and an [EVIDENCE] block under each paragraph (see Evidence blocks). One version only — no clean copy.
+4. The actual word count of the post text only (without [EVIDENCE] blocks and tags), checked against the target.
 5. **A rubric table** — one row per criterion: criterion | what the top band requires *beyond the band below* (the Step 1.3 delta) | the sentence or paragraph in the draft that earns it | Top band / Not yet. Quote the draft; do not describe it.
 6. A coverage check — the numbered parts of the question from Step 2, each marked answered, with where.
-7. A language check — flag any word above B1 with a simpler replacement, and flag any sentence over 20 words.
+7. A language check — post text only: flag any word above B1 with a simpler replacement, and flag any sentence over 20 words.
 8. 2–3 alternative opening lines.
 9. One follow-up question the user could use later, when classmates reply to them.
+10. If the draft has `[ADD YOUR EXAMPLE]`: at least 3 story ideas (see Personal examples).
+11. **Understanding check** — three short questions a classmate or the instructor could ask about this post. The user should be able to answer them without looking.
+12. **Before you submit** — the list described in "Before you submit".
 
 ---
 
@@ -179,7 +238,7 @@ Hand over the revised draft with the final table, not the first attempt with a l
 A strong reply is not "I agree." Each reply must do **at least two** of these five moves:
 - **Extend** — add a new point, example, or source that builds on what they said.
 - **Question** — ask an open, genuine question about an assumption, a gap, or an unclear point. Ask to understand and to deepen the dialogue, not to correct or grade.
-- **Connect** — link their idea to another reading, concept, or to the user's own initial post.
+- **Connect** — link their idea to another reading, concept, or to the user's own initial post. Use the initial post only if the user pasted it; never guess what it said.
 - **Apply** — take their idea and apply it to a different context or real case.
 - **Synthesize** — point out where their view agrees or disagrees with another classmate or a source.
 
@@ -213,11 +272,13 @@ These come from the course "Guidelines for Meaningful Peer Replies." Apply them 
 
 ### Mode B deliverable
 1. A subject line for each reply, but only if the forum needs one (see Post title). Otherwise skip it.
-2. One labeled reply per classmate, in the user's voice, with APA 7 citations where used.
+2. One labeled reply per classmate, in the user's voice, with APA 7 citations where used, and an [EVIDENCE] block under each paragraph (see Evidence blocks).
 3. For each reply, state which move(s) it makes (Extend / Question / Connect / Apply / Synthesize).
-4. The actual word count per reply, checked against the target.
-5. A language check — flag any word above B1, and flag any sentence over 20 words.
+4. The actual word count per reply (reply text only, without [EVIDENCE] blocks and tags), checked against the target.
+5. A language check — reply text only: flag any word above B1, and flag any sentence over 20 words.
 6. A short self-check confirming each reply meets the rubric, is *not* empty agreement, and stays non-evaluative (it adds to the discussion and does not grade or judge the classmate's post).
+7. If a reply has `[ADD YOUR EXAMPLE]`: at least 3 story ideas (see Personal examples).
+8. **Before you submit** — one list covering all replies (see "Before you submit").
 
 ---
 
@@ -230,8 +291,8 @@ Review the draft against everything above. Check, in this order:
 1. **Rubric** — go through each criterion one by one. Mark it Met / Weak / Missing, with one line of reason.
 2. **Requirements** — word count, number of citations, title if required, and any formatting rules from the assignment.
 3. **Language level** — flag every word above B1 with a simpler replacement. Flag every sentence over 20 words and show a shorter split.
-4. **Citations** — check APA 7 format for in-text citations and the References list. Flag anything that looks invented or incomplete with `[CHECK CITATION]`. Do not confirm a source is real if it cannot be verified — say so.
-5. **Critical thinking** — does the draft take a position, use course material by name, and add one non-obvious angle? For a reply: does it make at least two of the five moves, and is it non-evaluative?
+4. **Citations and sources** — check APA 7 format for in-text citations and the References list, including page numbers where the source has them and "as cited in" for ideas met only through the textbook. Check that each source supports the sentence it is attached to, not only that the format is right. Flag sentences that copy the source's wording too closely, and claims that contradict the readings without saying so. Flag anything that looks invented or incomplete with `[CHECK CITATION]`. Do not confirm a source is real if it cannot be verified — say so.
+5. **Critical thinking** — does the draft take a position, use course material by name, and add one non-obvious angle? Is every critique specific, not generic? For a reply: does it make at least two of the five moves, and is it non-evaluative?
 6. **AI-sounding language** — flag any phrase from the Avoid list or anything that does not match the voice sample.
 
 ### Review rules
@@ -247,7 +308,7 @@ After applying the edits, the user may paste the revision back. On a second pass
 1. A rubric table: each criterion marked Met / Weak / Missing with a one-line reason.
 2. A numbered list of targeted edits: exact original sentence → fixed sentence, with a short reason.
 3. A language check — words above B1 and sentences over 20 words, with fixes.
-4. A citation check result, with `[CHECK CITATION]` flags where needed.
+4. A citation and source check result — format, page numbers, whether each source supports its sentence, and close paraphrasing — with `[CHECK CITATION]` flags where needed.
 5. The actual word count, checked against the target.
 6. A final verdict: **Ready to submit** / **Ready after small edits** / **Needs one more pass**, in one or two sentences.
 
@@ -255,7 +316,7 @@ After applying the edits, the user may paste the revision back. On a second pass
 
 ## Always avoid (all modes)
 
-AI-sounding phrases ("delve into," "tapestry," "navigate the complexities"), bullet-point lists where prose is expected, empty agreement, restating the question back, and inventing sources or page numbers.
+AI-sounding phrases ("delve into," "tapestry," "navigate the complexities"), bullet-point lists where prose is expected, empty agreement, restating the question back, inventing sources or page numbers, generic critiques that fit any theory, and specific numbers or findings with no source.
 
 **Anti-template rhythm.** Do not use "Firstly / Secondly / Finally" or "In conclusion." Vary how paragraphs open — do not start every paragraph the same way. Not every paragraph needs a citation. Paragraphs can have different lengths. The post should read like a person thinking, not a filled-in template.
 
