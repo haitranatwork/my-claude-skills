@@ -1,0 +1,48 @@
+epic:
+  key: <JIRA-KEY>
+  project: WM
+  type: Epic
+  summary: <verb-first, one line>
+  description: |
+    <from intent.md — problem and outcome, readable by product and BA>
+
+tickets:
+  - key: null
+    project: WM
+    type: Story
+    milestone: M1
+    summary: <verb-first, one line>
+    repo: <repo>
+    description: |
+      <what and why, plain English, readable without the spec open>
+
+    acceptance_criteria:
+      - <testable and observable by QC, no implementation language>
+
+    ai_context: |
+      spec: epics/<slug>/spec.md#<anchor>
+      plan: epics/<slug>/plan.md#m1
+      contract: <endpoint, event, or type this implements>
+      conventions: <the repo conventions this must follow>
+      do_not: <the wrong-but-tempting approach for this ticket>
+
+    units:
+      - id: <KEY>-U1
+        goal: <one sentence, verb-first>
+        touches:
+          - <real file path>
+        done_when: <verifiable without the full feature>
+        context: S
+        status: pending
+
+      - id: <KEY>-U2
+        goal: <one sentence, verb-first>
+        touches:
+          - <real file path>
+        done_when: <verifiable without the full feature>
+        context: M
+        status: pending
+
+    depends_on: []
+    estimate: S | M | L
+    flag: <feature flag>
