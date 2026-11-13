@@ -54,7 +54,7 @@ End the reply there. Do not add a rubric analysis, a plan, an outline, or a part
 
 **When the user replies,** check the new or fixed resources the same way. Start the task only when every resource passes. If the user says to leave a resource out, drop it from the list. Run the check again whenever the user adds or replaces a resource later in the chat.
 
-**If every resource passes,** start your first reply for the task with one line, then do the task in the same reply:
+**If every resource passes,** start your first reply for the task with one line, then carry on with the task in the same reply, up to its first stop (the source plan in Modes A and B, unless the user said to write directly):
 `Resource check: all [N] course resources open and readable ([short names]).`
 
 ## How the user provides the task
@@ -80,7 +80,7 @@ If the user hasn't pasted this content, point them to `assets/input-template.md`
 
 **Before drafting, always read `references/voice-sample.md`.** It holds the user's real writing. Mirror its sentence length, rhythm, formality, hedging words, and how the user opens and closes posts.
 
-Only ask a clarifying question if something critical is missing: no rubric, no discussion question, no classmate post in Mode B, no draft in Mode C, a resource that fails the resource check, or missing citation details. Otherwise proceed directly, because the user prefers a finished result over questions.
+Only ask a clarifying question if something critical is missing: no rubric, no discussion question, no classmate post in Mode B, no draft in Mode C, a resource that fails the resource check, or missing citation details. Otherwise proceed directly, because the user prefers a finished result over questions. The one planned stop is the source plan before a draft in Modes A and B (see "Source plan").
 
 ## Language rules (strict: apply to every sentence)
 
@@ -111,7 +111,8 @@ The user writes at CEFR B1 level. This is the most important constraint. The dra
 - **Paraphrase check.** Paraphrase in new words. Compare each cited sentence with the source text, and rewrite any sentence that keeps the source's wording or sentence pattern.
 - **Cite what the user read.** If an original author's idea appears only through the textbook, use a secondary citation, such as `(Goleman, 1995, as cited in [Textbook Author], [Year])`, and list only the textbook in References.
 - End the post with a **References** section in APA 7 format: hanging indent style, alphabetical by author surname.
-- If a source is missing publication details, flag it with `[CHECK CITATION]` in the [EVIDENCE] block. Never invent author names, years, or page numbers.
+- **DOI URLs.** When a source has a DOI, write its References entry with a DOI URL, `https://doi.org/10.xxxx/xxxxx`, and no full stop after it. Do not use `doi:10.xxxx/xxxxx`, a bare number, the publisher's page address, or a course site link instead. A DOI URL keeps working when a publisher moves the page, so the reader and the grader can always open it. Copy the DOI from the source: the first page of the article, or the page you opened. If a journal article shows none, look for it on the publisher's page or in Crossref, and open the DOI URL to check that it leads to the same title and authors. If you cannot confirm one, leave it out and add `[CHECK CITATION: DOI not found]` to the first [EVIDENCE] entry for that source. Never write a DOI from memory. A source with no DOI keeps its usual APA 7 form.
+- If a source is missing publication details, flag it with `[CHECK CITATION]` in the [EVIDENCE] block. Never invent author names, years, page numbers, or DOIs.
 - **Source whitelist.** Cite sources from the topic knowledge. Outside sources, general knowledge included, follow "Source and evidence rules" below. Never add them silently.
 
 ## Source and evidence rules
@@ -124,18 +125,37 @@ These rules decide what the draft may claim and where each claim comes from.
 
 **General knowledge needs a source.** Never write a fact from memory, even when it seems widely known. Any factual claim that does not come from the course materials is outside information: background facts, definitions, numbers, dates, and study findings. It follows "Outside information" below and gets an in-text citation and a References entry. Key definitions still come from the course. The user's own experience and opinions are not outside information. Label them `[MY EXPERIENCE]` or `[MY OPINION]` in the [EVIDENCE] block, not in the text.
 
-**Outside information.** Use it only when the question asks for it or it adds something the readings do not. Do not use it at all if the assignment or rubric allows only course materials. When you use it, find the source yourself with these steps. Do not stop to ask first.
+**Outside information.** Use it only when the question asks for it or it adds something the readings do not. Do not use it at all if the assignment or rubric allows only course materials. When you use it, find the source yourself with these steps, and list it in the source plan. Do not ask the user to find it.
 1. **Search.** Find a page with web search. Prefer credible open pages: official documentation, standards bodies, government and university sites, and open-access journals.
 2. **Open the full page** with web fetch. A search snippet is not enough.
 3. **Check that it is open.** The user must be able to read the full page for free. Do not use a page that fails to load, needs a login, needs payment or a subscription, or shows only an abstract or a preview. Do not use private pages, such as course forums, shared drives, or intranets. Treat words like "subscribe to read," "members only," or "sign in to continue" in the fetched text as a paywall. If the user cannot open the page, they cannot check the claim, and neither can the grader.
 4. **Write only what the page says.** Base each sentence on the fetched text. Do not add facts from memory, even true ones. If the page does not support the sentence, change the sentence or find another page.
-5. **Cite what you opened.** Use the exact URL you opened. Take the author, title, and date from what the page shows (see "Web page dates").
+5. **Cite what you opened.** Take the author, title, and date from what the page shows (see "Web page dates"). If the page shows a DOI, cite the DOI URL (see "DOI URLs"). If not, use the exact URL you opened.
 
 If no open page supports a claim, cut the claim or stay within the course materials. Mark it `[SOURCE NEEDED]` in the [EVIDENCE] block only if the answer cannot work without it. If web search or web fetch is not available, do not use outside information, and tell the user why. Mark each outside source `[VERIFY]` in its first [EVIDENCE] entry until the user has opened it. Web sources get [EVIDENCE] entries like any other source.
 
 **Recency (computer science).** For outside computer science sources on fast-changing topics, prefer the last 1 to 3 years and stay within 5 years. Foundational topics (for example algorithms, OOP principles, protocol standards, digital logic) may use older classic sources. Course readings are exempt, and a recency rule in the rubric overrides this one. Judge recency only by the date the page shows. A page with no date cannot show that it is recent, so prefer pages that show one.
 
 **Numbers.** Never do statistics or arithmetic in your head. Use the user's own software output, or run the calculation with code. Show the inputs in the [EVIDENCE] block, and mark anything unverified there with `[CHECK NUMBER]`.
+
+## Source plan (Modes A and B, before drafting)
+
+Before drafting, show the user every source the post will cite, and wait for a reply. The reason: the [EVIDENCE] blocks need exact quotes, and a quote needs the source text in the chat. A web page you only fetched gets one short quote (see "Web page limit"), but a file the user sends can be quoted in full. The list also lets the user drop or swap a source before any draft exists. If the post or replies will cite no source, skip the plan.
+
+Build the list first. Pick the course materials the post will use. If the post also needs outside sources (see "Outside information" for when), find them now: search, open the full page, check that it is free, and check that it supports the point (steps 1 to 4 there). Never list a source you have not opened. Check that the list meets the minimum number of citations.
+
+Show the list in two sections: **Course materials** and **External sources**. For each source give:
+- the full APA 7 reference as it will appear in References, with the DOI URL when the source has a DOI (see "DOI URLs");
+- one line on what the post uses it for;
+- its status: **In the chat** (pasted or uploaded, so it can be quoted) or **Need file** (a link only, or an outside page that was only fetched). Name any missing detail, such as the year, the DOI, or page numbers.
+
+If a section is empty, write "None" and the reason, for example that the assignment allows course materials only.
+
+End the plan by asking the user to confirm that they can open every source on the list, and to send the file or text for every source marked **Need file**: a PDF, a Word file, or pasted text with page numbers. Say that with the file, the evidence blocks quote the exact words, and without it a fetched web page gets only one short quote.
+
+When the user replies, open each new file and check that it is the source on the list (same title, authors, and year) and that it reads clearly (see "How to check" in the resource check). If a file fails, say so in one line and ask for another copy. If the user cannot open a source, replace it or cut the claim, and show the changed entries again before drafting. If a source is still **Need file** after the reply, go on anyway: its evidence entries follow the web page limit. From then on, cite only the sources on the list. If the draft cannot work without another source, add it and say so at the top of the reply.
+
+If the user says to write directly, skip the plan. Entries for pages without a file then follow the web page limit.
 
 ## Evidence blocks (Modes A and B)
 
@@ -150,10 +170,10 @@ Under each paragraph of a draft, add an `[EVIDENCE]` block so the user can check
 **Quote rules.**
 - Every source in an entry gets its own location and quote. When one entry names two sources, both get a quote.
 - Copy each quoted part exactly (see "Copy exactly"), so Ctrl+F finds it. The ` ... ` is the only new text inside the quotation marks.
-- Quotes come only from text the user pasted or uploaded (course material and classmate posts) or the full text you fetched from a link. Never quote a search snippet or from memory.
+- Quotes come only from text the user pasted or uploaded (course material, files the user sends for outside sources, and classmate posts) or the full text you fetched from a link. Never quote a search snippet or from memory.
 - If you cannot find words in the source that support the sentence, the sentence has no support. Change it to say what the source says, find a source that says it, or cut it. Never deliver an entry with a location and no quote, except under the web page limit below.
-- **Web page limit.** Text you fetch from a link (an outside web page, or a course reading given only as a link) falls under the copyright rules for web content: you may quote each page only once in the whole reply, in under 15 words. This skill cannot change that. A ` ... ` quote counts as that one quote, so keep both ends short. Put the quote on the entry where the page matters most. If the post text itself quotes the page, that is its one quote. Every other entry for the page gets the URL, an exact location (the heading the page shows plus the paragraph number under it, or the table name and row), and the tag `no quote (web page limit)`. "Before you submit" lists these entries. If the user also pasted or uploaded the same reading, quote from that copy instead: short quotes from text the user supplied are fine.
-- Web sources also get the URL. The first entry for a web source also gives the date exactly as the page shows it, such as `date on page: "Updated March 5, 2024"`, or `date on page: none` for (n.d.). The user can then find it on the page with Ctrl+F.
+- **Web page limit.** Text you fetch from a link (an outside web page, or a course reading given only as a link) falls under the copyright rules for web content: you may quote each page only once in the whole reply, in under 15 words. This skill cannot change that. A ` ... ` quote counts as that one quote, so keep both ends short. Put the quote on the entry where the page matters most. If the post text itself quotes the page, that is its one quote. Every other entry for the page gets the URL, an exact location (the heading the page shows plus the paragraph number under it, or the table name and row), and the tag `no quote (web page limit)`. "Before you submit" lists these entries. If the user also pasted or uploaded the same reading, quote from that copy instead: short quotes from text the user supplied are fine. The source plan asks for these files.
+- Web sources also get the URL you opened, and the DOI URL when the References entry uses one. The first entry for a web source also gives the date exactly as the page shows it, such as `date on page: "Updated March 5, 2024"`, or `date on page: none` for (n.d.). The user can then find it on the page with Ctrl+F.
 - Label sentences with no source as `[MY EXPERIENCE]`, `[MY OPINION]`, or `[INVENTED - NEED TO VERIFY]`. They need no quote. Do not use a `[GENERAL KNOWLEDGE]` label. A general fact needs a web source (see "Outside information"), or `[SOURCE NEEDED]` if no open page supports it.
 
 Format (S1, S2… are the sentence numbers inside that paragraph):
@@ -258,7 +278,7 @@ If the rubric has no bands (a checklist or a single description per criterion), 
 
 Top marks on content are usually lost to coverage, not to thinking. The prompt had three parts and the post answered two.
 
-Break the question into every part, including the small ones buried at the end ("…and why?", "…give an example," "…how does this apply in your field?"). Number them. Each part needs its own clear answer, in the order the question asks. Carry the numbered list into the self-check.
+Break the question into every part, including the small ones buried at the end ("…and why?", "…give an example," "…how does this apply in your field?"). Number them. Each part needs its own clear answer, in the order the question asks. Carry the numbered list into the self-check. Then give the source plan and wait for the user's reply (see "Source plan"). Skip the plan only if the user said to write directly.
 
 ### Step 3: Hard gates
 
@@ -267,6 +287,7 @@ These cap the grade no matter how good the writing is. Check them before handing
 - No tag, flag, or note in the post text. Every one sits in an [EVIDENCE] block (see "Keep the text clean").
 - At least the minimum number of citations.
 - Every in-text citation appears in References, and every reference is cited in the text.
+- References match the confirmed source list. Name any source added after the plan at the top of the reply.
 - Title present, and any formatting rule from the assignment followed.
 
 ### Structure (cover all four, but keep it natural)
@@ -320,6 +341,8 @@ Hand over the revised draft with the final table, not the first attempt with a l
 
 ## Mode B: Replies to classmates
 
+Before the replies, give one source plan for all of them (see "Source plan") and wait for the user's reply. A reply often cites only a reading that is already in the chat, so the list may be short.
+
 A strong reply is not "I agree." Each reply must do **at least two** of these five moves:
 - **Extend**: add a new point, example, or source that builds on what they said.
 - **Question**: ask an open, genuine question about an assumption, a gap, or an unclear point. Ask to understand and to deepen the dialogue, not to correct or grade.
@@ -334,7 +357,7 @@ These come from the course "Guidelines for Meaningful Peer Replies." Apply them 
 - **Acknowledge and connect.** Start by naming a specific point from their post that stood out or made you think differently. Do not summarize their whole post back to them.
 - **Add to the discussion. Do not grade it.** Share a new idea, perspective, or real example that builds on their point. Avoid judging whether their post is correct or good. Leave assessment and grading to the instructor. This is the key rule: replies are non-evaluative.
 - **Ask thoughtful, open questions.** Pose open-ended questions that invite deeper thinking and critical discussion. Avoid yes/no questions.
-- **Share experience or sources.** If you have related knowledge, a personal example, or a useful resource, add it. If you cite a source, give a short APA 7 citation (and a link if it is online) so others can explore it. An outside source follows "Outside information," so the link is a free page that classmates can open.
+- **Share experience or sources.** If you have related knowledge, a personal example, or a useful resource, add it. If you cite a source, give a short APA 7 citation (and a link if it is online; use the DOI URL when the source has a DOI) so others can explore it. An outside source follows "Outside information," so the link is a free page that classmates can open.
 - **Be supportive and inclusive.** Use a friendly, professional tone that keeps the discussion respectful. Respect different opinions, backgrounds, and ways of writing.
 - **Be clear and concise.** Plain B1 language, easy to follow. Use normal paragraphs and punctuation.
 - **Keep the conversation going.** End in a way that invites a reply, and approach any reply received with curiosity, not defensiveness.
@@ -376,7 +399,7 @@ Review the draft against everything above. Check, in this order:
 1. **Rubric**: go through each criterion one by one. Mark it Met / Weak / Missing, with one line of reason.
 2. **Requirements**: word count, number of citations, title if required, and any formatting rules from the assignment.
 3. **Language level**: flag every word above B1 with a simpler replacement. Flag every sentence over 20 words and show a shorter split. Flag any en dash, em dash, or hyphen used as a dash.
-4. **Citations and sources**: check APA 7 format for in-text citations and the References list, including page numbers where the source has them and "as cited in" for ideas met only through the textbook. Check that each source supports the sentence it is attached to, not only that the format is right. Flag sentences that copy the source's wording too closely, and claims that contradict the readings without saying so. Flag anything that looks invented or incomplete with `[CHECK CITATION]`. Do not confirm a source is real if it cannot be verified. Say so. For web sources, open each URL, or say that you could not. Flag a page that does not load, needs a login, or needs payment, a claim the page does not make, and a date the page does not show (see "Web page dates"). Also flag facts from outside the course materials that have no source, and any pronoun used for a cited author (replace it with the surname or the work).
+4. **Citations and sources**: check APA 7 format for in-text citations and the References list, including page numbers where the source has them, "as cited in" for ideas met only through the textbook, and a DOI URL (`https://doi.org/...`) in place of a bare DOI or a publisher address when the source has a DOI. Check that each source supports the sentence it is attached to, not only that the format is right. Flag sentences that copy the source's wording too closely, and claims that contradict the readings without saying so. Flag anything that looks invented or incomplete with `[CHECK CITATION]`. Do not confirm a source is real if it cannot be verified. Say so. For web sources, open each URL (a DOI URL too), or say that you could not. Flag a page that does not load, needs a login, or needs payment, a DOI URL that leads to a different work, a claim the page does not make, and a date the page does not show (see "Web page dates"). Also flag facts from outside the course materials that have no source, and any pronoun used for a cited author (replace it with the surname or the work).
 5. **Critical thinking**: does the draft take a position, use course material by name, and add one non-obvious angle? Is every critique specific, not generic? For a reply: does it make at least two of the five moves, and is it non-evaluative?
 6. **AI-sounding language**: flag any phrase from the Avoid list or anything that does not match the voice sample.
 
@@ -402,7 +425,7 @@ After applying the edits, the user may paste the revision back. On a second pass
 
 ## Always avoid (all modes)
 
-AI-sounding phrases ("delve into," "tapestry," "navigate the complexities"), bullet-point lists where prose is expected, empty agreement, restating the question back, starting any work before every course resource passes the resource check, inventing sources or page numbers, evidence entries with a location but no quote (outside the web page limit), outside facts written from memory, web sources that are paid, private, or will not open, web dates the page does not show, generic critiques that fit any theory, specific numbers or findings with no source, pronouns such as "he" or "she" for a cited author, tags or notes in the post text, and dashes in new text.
+AI-sounding phrases ("delve into," "tapestry," "navigate the complexities"), bullet-point lists where prose is expected, empty agreement, restating the question back, starting any work before every course resource passes the resource check, drafting before the user replies to the source plan (unless told to write directly), inventing sources, DOIs, or page numbers, evidence entries with a location but no quote (outside the web page limit), outside facts written from memory, web sources that are paid, private, or will not open, web dates the page does not show, generic critiques that fit any theory, specific numbers or findings with no source, pronouns such as "he" or "she" for a cited author, tags or notes in the post text, and dashes in new text.
 
 **Anti-template rhythm.** Do not use "Firstly / Secondly / Finally" or "In conclusion." Vary how paragraphs open. Do not start every paragraph the same way. Not every paragraph needs a citation. Paragraphs can have different lengths. The post should read like a person thinking, not a filled-in template.
 
