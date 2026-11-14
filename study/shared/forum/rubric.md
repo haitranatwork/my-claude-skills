@@ -1,6 +1,6 @@
 # Reading the rubric
 
-Every initial post aims at the **top band** of the rubric, not a pass. The gap between the band below and the top band is almost never more words or bigger words. It is usually one verb: *describe* becomes *analyze*, *mention a source* becomes *integrate sources*, *summarize* becomes *evaluate and apply*. Find that verb for each criterion. Top-band thinking still uses plain B1 English (see `language.md`); harder vocabulary lowers the result, because it stops sounding like the user.
+Every initial post aims at the **top band** of the rubric, not a pass. The gap between the band below and the top band is almost never more words or bigger words. It is usually one verb: *describe* becomes *analyze*, *mention a source* becomes *integrate sources*, *summarize* becomes *evaluate and apply*. Find that verb for each criterion. Top-band thinking still uses the plain language of `language.md`: a bigger word adds no depth, and it stops sounding like the user.
 
 ## Decode it
 

@@ -1,4 +1,4 @@
-<!-- Copied from study/shared/sources.md by study/build.py. Edit that file, then run the build again. -->
+<!-- Copied from study/shared/forum/sources.md by study/build.py. Edit that file, then run the build again. -->
 
 # Sources
 

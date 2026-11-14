@@ -1,4 +1,4 @@
-<!-- Copied from study/shared/voice-sample.md by study/build.py. Edit that file, then run the build again. -->
+<!-- Copied from study/shared/forum/voice-sample.md by study/build.py. Edit that file, then run the build again. -->
 
 # Voice sample
 
@@ -12,7 +12,7 @@ This is the user's real writing, taken from a discussion forum post. Read it bef
 - how the user opens and closes a post: here, a clear view in the first sentence, and a close that ties the example back to the main idea;
 - first person, personal examples, and questions.
 
-Sentence length follows `language.md`, not this sample. Add no advanced word that is not already in this sample, unless it is a technical term from the course. Plain B1 language wins over this sample, over sample posts, and over any other source.
+Sentence length and word level follow `language.md`, not this sample. Plain language wins over this sample, over sample posts, and over any other source.
 
 ## Sample (user's own writing)
 

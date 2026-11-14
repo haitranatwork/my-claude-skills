@@ -1,10 +1,12 @@
 """Build the study skills for claude.ai.
 
-Shared rules live once in study/shared/. This script copies the files each
-skill needs into that skill's references/ folder, checks each SKILL.md
-against claude.ai's upload rules, and writes one zip per skill to study/dist/.
-Never edit a copied file: the next build overwrites it. Edit the file in
-study/shared/ and run the build again (see study/docs/adr/0002).
+Shared rules live in study/shared/<family>/: forum/ for the forum skills and
+assignment/ for the assignment skills. This script copies the files each skill
+needs from its own family's folder into that skill's references/ folder,
+checks each SKILL.md against claude.ai's upload rules, and writes one zip per
+skill to study/dist/. Never edit a copied file: the next build overwrites it.
+Edit the file in study/shared/<family>/ and run the build again (see
+study/docs/adr/0002 and 0003).
 
 Usage:
     python study/build.py           copy the shared files, then write study/dist/<skill>.zip
@@ -22,30 +24,42 @@ STUDY = Path(__file__).resolve().parent
 SHARED = STUDY / "shared"
 DIST = STUDY / "dist"
 
-# The shared files each skill gets, copied into <skill>/references/.
-# A rule that only one skill uses lives in that skill, not here.
+# Each skill's family, and the shared files it gets, copied from
+# study/shared/<family>/ into <skill>/references/. A skill copies only from its
+# own family's folder, so a change for one family never changes the other
+# family's zips. Every reference file lives in a family folder, even one that a
+# single skill uses, so every file in references/ is a copy.
 SKILLS = {
-    "forum-post-create": [
+    "forum-post-create": ("forum", [
         "resource-check.md", "rubric.md", "strong-post.md", "top-band-standard.md",
         "sources.md", "evidence-blocks.md", "personal-examples.md",
         "language.md", "voice-sample.md", "apa7.md",
-    ],
-    "forum-post-review": [
+    ]),
+    "forum-post-review": ("forum", [
         "resource-check.md", "rubric.md", "strong-post.md", "top-band-standard.md",
         "language.md", "voice-sample.md", "apa7.md", "sources.md",
-    ],
-    "forum-post-assessment": [
+    ]),
+    "forum-post-assessment": ("forum", [
         "resource-check.md", "rubric.md", "strong-post.md", "top-band-standard.md",
         "apa7.md", "sources.md", "language.md", "voice-sample.md",
-    ],
-    "forum-post-reply": [
+    ]),
+    "forum-post-reply": ("forum", [
         "resource-check.md", "sources.md", "evidence-blocks.md", "personal-examples.md",
         "language.md", "voice-sample.md", "apa7.md",
-    ],
+    ]),
+    "assignment-create": ("assignment", [
+        "resource-check.md", "rubric.md", "strong-assignment.md", "top-band-standard.md",
+        "sources.md", "evidence-blocks.md", "personal-examples.md",
+        "language.md", "voice-sample.md", "apa7.md",
+    ]),
+    "assignment-review": ("assignment", [
+        "resource-check.md", "rubric.md", "strong-assignment.md", "top-band-standard.md",
+        "language.md", "voice-sample.md", "apa7.md", "sources.md",
+    ]),
 }
 
 COPY_MARK = "<!-- Copied from study/shared/"
-HEADER = COPY_MARK + "{name} by study/build.py. Edit that file, then run the build again. -->\n\n"
+HEADER = COPY_MARK + "{family}/{name} by study/build.py. Edit that file, then run the build again. -->\n\n"
 
 # Upload rules from the claude.ai Help Center article "How to create custom Skills".
 NAME_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -115,11 +129,12 @@ def frontmatter_problems(skill):
     return problems
 
 
-def reference_problems(skill, names):
+def reference_problems(skill, family, names):
     """Every shared rule file or references/ or assets/ path a skill's text names must ship inside that skill."""
     skill_dir = STUDY / skill
-    shared_names = {path.name for path in SHARED.glob("*.md")}
-    sources = [skill_dir / "SKILL.md"] + [SHARED / name for name in names]
+    shared = SHARED / family
+    shared_names = {path.name for path in shared.glob("*.md")}
+    sources = [skill_dir / "SKILL.md"] + [shared / name for name in names]
     sources += sorted((skill_dir / "assets").glob("*.md"))
     problems = []
     for source in sources:
@@ -129,26 +144,27 @@ def reference_problems(skill, names):
             if target not in shared_names and not target.startswith(("references/", "assets/")):
                 continue  # an example file name, such as an output file, not a pointer
             candidates = [skill_dir / target, skill_dir / "references" / target]
-            shipped = target in names or any(c.is_file() for c in candidates)
+            # A file on the skill's list ships, even before the first build has copied it.
+            shipped = target.removeprefix("references/") in names or any(c.is_file() for c in candidates)
             if not shipped:
                 problems.append(f"{skill}: {source.name} points to {target}, which the skill does not ship")
     return problems
 
 
 def sync(check):
-    """Bring every skill's copies in line with study/shared/. Return the problems found."""
+    """Bring every skill's copies in line with its family's folder in study/shared/. Return the problems found."""
     problems = []
-    for skill, names in SKILLS.items():
+    for skill, (family, names) in SKILLS.items():
         problems += frontmatter_problems(skill)
-        problems += reference_problems(skill, names)
+        problems += reference_problems(skill, family, names)
         refs = STUDY / skill / "references"
         for name in names:
-            source = SHARED / name
+            source = SHARED / family / name
             if not source.is_file():
-                problems.append(f"study/shared/{name} is missing")
+                problems.append(f"study/shared/{family}/{name} is missing")
                 continue
             target = refs / name
-            expected = HEADER.format(name=name) + read(source)
+            expected = HEADER.format(family=family, name=name) + read(source)
             current = read(target) if target.is_file() else None
             if current == expected:
                 continue

@@ -1,4 +1,4 @@
-<!-- Copied from study/shared/language.md by study/build.py. Edit that file, then run the build again. -->
+<!-- Copied from study/shared/forum/language.md by study/build.py. Edit that file, then run the build again. -->
 
 # Language
 
@@ -6,7 +6,9 @@ The user writes at CEFR B1 level, and everything written in the user's voice mus
 
 ## Words
 
-- Use common, everyday words at B1 level or below: show, use, help, important, problem, idea, also, but, because, however. Keep a harder word only when it is a technical term from the course.
+- Use common, everyday words at B1 level or below: show, use, help, important, problem, idea, also, but, because, however.
+- **B2 words** are welcome where they make a sentence clearer or more exact than the B1 wording, such as "significant" for "big and important." Keep them to 10% of the words in the text, or fewer.
+- **Technical terms from the course** stay as the course writes them, at any level, and are outside the 10%. Every other word above B2 gets a plainer replacement.
 - Start each sentence with its point. Filler openings such as "It is important to note that," "In today's society," or "Since the dawn of time" add nothing.
 - Replace any word that sounds like AI writing with a plain one. Check for these in particular: delve, navigate, leverage, underscore, tapestry, multifaceted, paradigm, intricate, crucial, pivotal, foster.
 
@@ -37,5 +39,6 @@ Text copied from a source or from the user keeps every character as it is: quote
 When the output includes a language check, it covers the text the user will post or submit (never the evidence blocks) and reports:
 - the average sentence length, against the target of 20 to 25 words;
 - every sentence over 30 words, with a way to split it;
-- every word above B1, with a plain replacement;
+- the B2 words used, and their share of the text against the 10% limit;
+- every word above B2 that is not a technical term from the course, with a plain replacement;
 - the result of the dash check.

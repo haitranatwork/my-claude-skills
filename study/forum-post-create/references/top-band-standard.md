@@ -1,4 +1,4 @@
-<!-- Copied from study/shared/top-band-standard.md by study/build.py. Edit that file, then run the build again. -->
+<!-- Copied from study/shared/forum/top-band-standard.md by study/build.py. Edit that file, then run the build again. -->
 
 # Default top-band standard
 

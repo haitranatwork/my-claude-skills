@@ -1,4 +1,4 @@
-<!-- Copied from study/shared/strong-post.md by study/build.py. Edit that file, then run the build again. -->
+<!-- Copied from study/shared/forum/strong-post.md by study/build.py. Edit that file, then run the build again. -->
 
 # A strong initial post
 

@@ -1,4 +1,4 @@
-<!-- Copied from study/shared/personal-examples.md by study/build.py. Edit that file, then run the build again. -->
+<!-- Copied from study/shared/forum/personal-examples.md by study/build.py. Edit that file, then run the build again. -->
 
 # Personal examples
 

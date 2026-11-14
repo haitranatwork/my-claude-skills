@@ -1,16 +1,19 @@
+<!-- Copied from study/shared/assignment/voice-sample.md by study/build.py. Edit that file, then run the build again. -->
+
 # Voice sample
 
-This is the user's real writing, taken from a discussion forum post. Read it before writing anything in the user's voice: a post, a reply, a fixed sentence, or a feedback comment.
+This is the user's real writing, taken from a discussion forum post. Read it before writing anything in the user's voice: an assignment, or a fixed sentence in a review.
 
 ## What to mirror
 
 - the rhythm: a plain statement, then a reason or an example;
-- the formality: plain, friendly, academic but not stiff;
-- the hedging words the user uses: "I think," "maybe," "it seems," "I am not sure";
-- how the user opens and closes a post: here, a clear view in the first sentence, and a close that ties the example back to the main idea;
-- first person, personal examples, and questions.
+- the plain, direct words, with a harder word only where the topic needs it;
+- how the user tells a personal example: what happened, what the user did, and what it showed;
+- how a paragraph closes: it ties the example back to the main idea.
 
-Sentence length follows `language.md`, not this sample. Add no advanced word that is not already in this sample, unless it is a technical term from the course. Plain B1 language wins over this sample, over sample posts, and over any other source.
+## What changes in an assignment
+
+The sample is a forum post, so it is more personal than an assignment. The tone rules in `language.md` win over the sample: full forms where the sample has "isn't" and "I'm," and "may" or "suggests" beside the sample's "I think." Sentence length and word level follow `language.md` too.
 
 ## Sample (user's own writing)
 

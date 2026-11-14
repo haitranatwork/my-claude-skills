@@ -1,4 +1,4 @@
-<!-- Copied from study/shared/evidence-blocks.md by study/build.py. Edit that file, then run the build again. -->
+<!-- Copied from study/shared/forum/evidence-blocks.md by study/build.py. Edit that file, then run the build again. -->
 
 # Evidence blocks
 

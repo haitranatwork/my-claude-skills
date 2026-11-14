@@ -1,4 +1,4 @@
-<!-- Copied from study/shared/apa7.md by study/build.py. Edit that file, then run the build again. -->
+<!-- Copied from study/shared/forum/apa7.md by study/build.py. Edit that file, then run the build again. -->
 
 # APA 7 citations
 

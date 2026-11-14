@@ -1,4 +1,4 @@
-<!-- Copied from study/shared/resource-check.md by study/build.py. Edit that file, then run the build again. -->
+<!-- Copied from study/shared/forum/resource-check.md by study/build.py. Edit that file, then run the build again. -->
 
 # Resource check
 
