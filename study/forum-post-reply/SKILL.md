@@ -5,19 +5,19 @@ description: "Write or check the user's replies to classmates in a discussion fo
 
 # Reply to classmates
 
-Write the user's **replies**: posts that answer a classmate's initial post, a classmate who replied to the user's initial post, or a later post in the same thread. A reply grows the conversation and never grades. This skill also reviews a reply the user wrote (see "Review a reply the user wrote").
+Write the user's **replies**: posts that answer a classmate's initial post, a classmate's reply to the user's initial post, or a later post in a thread, such as a classmate's reply to one of the user's replies. A reply grows the conversation and never grades. This skill also reviews a reply the user wrote (see "Review a reply the user wrote").
 
 Other forum tasks have their own skills: `forum-post-create` writes the user's initial post, `forum-post-review` reviews it, and `forum-post-assessment` grades a classmate's initial post. If the user pastes a classmate's post without saying whether to grade it or reply to it, ask which one before starting.
 
 ## Inputs
 
 The user fills in `assets/input-template.md`, or pastes the same parts.
-- **Required:** for each reply, the **thread** from the initial post down to the post being answered, with each post labeled (for example, Classmate 1, Me); and the course material.
-- **Optional:** the reply requirements (how many replies, words per reply, what each reply should address, any grading criteria for replies), and the user's own initial post, so replies can connect to it.
+- **Required:** the post to answer and, when it is itself a reply, the posts above it in its thread; and the course material.
+- **Optional:** the classmate's name, the reply requirements (how many replies, words per reply, what each reply should address, any grading criteria for replies), and the user's own initial post, so the reply can connect to it.
 
-Inputs carry over within a chat: the user often writes and reviews the initial post with `forum-post-create` and `forum-post-review`, and asks for replies later in the same chat. Reuse every input the user already sent in this chat for this discussion: the course material, the user's copy of any outside source, classmates' posts, and the reply requirements, which the instructions or the rubric sent earlier may already give. Right after the resource check line, list in one line what you took from earlier in the chat, including the user's initial post if it came from there, so the user can correct it.
+Inputs carry over within a chat: the user often writes and reviews the initial post with `forum-post-create` and `forum-post-review`, then asks for replies in the same chat, one at a time, sending only the classmate's post. Reuse every input the user already sent in this chat for this discussion: the course material, the user's copy of any outside source, classmates' posts, and the reply requirements, which the instructions or the rubric sent earlier may already give. Right after the resource check line, list in one line what you took from earlier in the chat, including any post of the user's, so the user can correct it.
 
-Use the user's initial post only when it is in the chat, in its latest version, such as the corrected post from `forum-post-review` or the post file from `forum-post-create`; never guess what it said. With no reply requirements, write one reply per post given, 100 to 200 words each and shorter than the user's initial post. When the requirements include grading criteria, each reply meets their top band.
+Take the user's own posts (the initial post and earlier replies) from the chat, each in its latest version, such as the corrected post from `forum-post-review`, the post file from `forum-post-create`, or a corrected reply from a review. Ask for any post above the one to answer that is not in the chat; never guess what a post said. With no reply requirements, write one reply per post given, 100 to 200 words each and shorter than the user's initial post. When the requirements include grading criteria, each reply meets their top band.
 
 ## What a good reply does
 
@@ -53,31 +53,31 @@ When the classmate asked the user a question, the reply answers it in its first 
 
 1. One sentence on a specific point they made, not the whole post; or the answer, when they asked the user something.
 2. The moves, with course material and APA 7 citations where useful. A reply that cites a source ends with References for those sources.
-3. A question back to them. When replying to several classmates at once, one or two replies may end on a statement instead, so they do not all sound the same.
+3. A question back to them. Across the replies in one chat, one or two may end on a statement instead, so they do not all sound the same.
 
 ### Several replies, and threads
 
-- Write one labeled reply per post. Make each one different: if two classmates said similar things, take a different angle in each, or use one reply to connect their two posts.
+- Write one labeled reply per post. Make each reply different from the user's other replies in this chat, including the ones from earlier requests: vary the opening, the moves, and the closing. If two classmates said similar things, take a different angle in each, or use one reply to connect their two posts.
 - Further down a thread, read the whole thread first. The reply answers the latest post, stays consistent with what the user said earlier, and does not repeat it.
 
 ## Steps
 
 1. **Resource check.** Read `references/resource-check.md` and run it.
-2. **Plan, then stop.** Read `references/sources.md`, `references/evidence-blocks.md`, and `references/personal-examples.md`. One plan covers all the replies. For each reply, show:
-   - the specific point it responds to, quoted from the post, and the question to answer first if the classmate asked the user one;
+2. **Choose what each reply does.** Read `references/sources.md`, `references/evidence-blocks.md`, and `references/personal-examples.md`. For each reply, choose:
+   - the specific point it responds to, and the question to answer first if the classmate asked the user one;
    - its moves;
-   - any source (see "Sources in the plan" in `evidence-blocks.md`);
-   - a story idea, where a personal example fits and the user gave none (see `personal-examples.md`).
+   - any source, picked and opened as in step 1 of "Sources in the plan" in `evidence-blocks.md`;
+   - where a personal example fits, when the user gave none.
 
-   Then wait for the user's reply. If the user said to write directly, skip the plan and go on.
-3. **Draft.** Read `references/language.md`, `references/voice-sample.md`, and `references/apa7.md`. Write each reply as planned, with an evidence block under each paragraph (see `evidence-blocks.md`).
-4. **Check.** For each reply, confirm that it opens on a specific point, makes its moves, stays non-evaluative (nothing judges whether the post is good or correct), meets the word count, passes the language check and the dash check in `language.md`, and holds no label, flag, or note in its text. Fix anything that fails before delivering.
+   Stop and wait for the user only when a reply needs a personal example they have not given in this chat, or an outside source they have not approved or sent in this chat. Then show these choices as a plan, with at least 3 story ideas for the example (see `personal-examples.md`) and each new outside source listed as in "Sources in the plan." Otherwise go straight on to the draft: the user wants the reply, not a plan. When the user asks for a plan first, or says to write directly, do that instead.
+3. **Draft.** Read `references/language.md`, `references/voice-sample.md`, and `references/apa7.md`. Write each reply from those choices, with an evidence block under each paragraph (see `evidence-blocks.md`).
+4. **Check.** For each reply, confirm that it opens on a specific point, makes its moves, differs from the user's other replies in this chat, stays non-evaluative (nothing judges whether the post is good or correct), meets the word count, passes the language check and the dash check in `language.md`, and holds no label, flag, or note in its text. Fix anything that fails before delivering.
 5. **Deliver** as described below.
 
 ## Deliverable
 
 In the chat:
-1. **Each reply**, labeled (for example, "Reply to Classmate 1"): a subject line only if the forum needs one; the reply with an evidence block under each paragraph; the moves it makes; and its word count against the target.
+1. **Each reply**, labeled with the classmate and the post it answers (for example, "Reply to Anna's initial post" or "Reply to Ben's reply to your post"): a subject line only if the forum needs one; the reply with an evidence block under each paragraph; the moves it makes; and its word count against the target.
 2. **Checks:** the language check for each reply, and one line per reply confirming that it adds to the discussion and stays non-evaluative.
 3. **Before you submit:** one list covering all the replies (see `evidence-blocks.md`).
 

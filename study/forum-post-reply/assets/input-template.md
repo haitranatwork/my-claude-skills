@@ -1,10 +1,10 @@
-# Input template: reply to classmates
+# Input template: reply to a classmate
 
-Copy this, fill in what you have, and paste it into a new chat. Leave a field blank if it does not apply. In a chat that already has some of these parts, such as the chat where Claude wrote your initial post, send only what is new, usually the threads.
+Copy this, fill in what you have, and paste it into a new chat. Leave a field blank if it does not apply. In the chat where Claude wrote your initial post or an earlier reply, send only the classmate's post and any part that changed.
 
 ---
 
-## Reply requirements (optional: how many replies, words per reply, what each reply should address, and any grading criteria; leave blank for one reply per post, 100 to 200 words each)
+## Reply requirements (optional: words per reply, what each reply should address, and any grading criteria; leave blank for 100 to 200 words)
 ```
 
 ```
@@ -15,35 +15,31 @@ Claude opens every item before it starts, and stops if any one cannot be read. I
 
 ```
 
-## My initial post (optional: paste it so replies can connect to it)
+## My initial post (optional: paste it so the reply can connect to it)
 ```
 
 ```
 
-## Threads (one block per reply: paste the thread from the initial post down to the post you are answering, and label each post)
+## Classmate's post (the post you are replying to)
 ```
-Thread 1
-[Classmate 1, initial post]
+Classmate: [name]
+It is: [their initial post / their reply to my initial post / their reply to my reply]
 
-
-[Me, reply]
-
-
-[Classmate 1, reply to me] (answer this one)
-
-
-Thread 2
-[Classmate 2, initial post] (answer this one)
-
+[paste the post]
 
 ```
 
-## To check a reply I wrote (use this instead of Threads)
+## Posts above it in the thread (only when the classmate's post is a reply and these posts are not already in this chat: oldest first, each labeled, such as [Anna, initial post] or [Me, reply])
+```
+
+```
+
+## To check a reply I wrote (use this instead of Classmate's post)
 ```
 My reply:
 
 
-The post it answers (with the thread above it, if it is further down a thread):
+The post it answers (leave blank if it is already in this chat; otherwise paste it with the posts above it):
 
 
 ```

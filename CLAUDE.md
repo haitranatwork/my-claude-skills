@@ -20,9 +20,9 @@ These folders hold the source. To see or change what a skill does, read and edit
 **Workflow.** The user runs a family's skills one after another in one claude.ai chat, and sends each input only once:
 
 - Written assignment: `assignment-create`, then `assignment-review`.
-- Discussion forum: `forum-post-create`, then `forum-post-review`, then `forum-post-reply`, and sometimes `forum-post-assessment`.
+- Discussion forum: `forum-post-create`, then `forum-post-review`, then `forum-post-reply` once per reply, and sometimes `forum-post-assessment`. Each reply answers one post: a classmate's initial post, a classmate's reply to the user's initial post, or a classmate's reply to one of the user's replies.
 
-Each later skill reuses what the user already sent in the chat, and the files that earlier skills delivered, such as the post file: see the "Inputs carry over within a chat" paragraph in its Inputs section. When a skill's inputs or deliverables change, update that paragraph in the skills after it in the sequence. A new skill that joins a sequence gets the same paragraph.
+Each later skill reuses what the user already sent in the chat, and what earlier runs delivered, such as the post file or an earlier reply: see the "Inputs carry over within a chat" paragraph in its Inputs section. When a skill's inputs or deliverables change, update that paragraph in the skills after it in the sequence. A new skill that joins a sequence gets the same paragraph.
 
 **Build.** `study/build.py` builds the family skills. It copies each family's shared rules from `study/shared/<family>/` into each skill's `references/`, checks each `SKILL.md` against claude.ai's upload rules, and writes one zip per skill to `study/dist/` (untracked) for the user to upload. Its `SKILLS` table lists the built skills and the shared files each one gets.
 
