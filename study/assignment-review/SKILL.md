@@ -15,7 +15,9 @@ The user fills in `assets/input-template.md`, or pastes the same parts.
 - **Required:** the user's draft (the full assignment, with References), the assignment question, the rubric, and the course material the draft uses.
 - **Optional:** the assignment instructions (word count, minimum number of sources, formatting), and the output format for the corrected assignment (Markdown or Word).
 
-If the draft or the question is missing, ask for it. If the rubric is missing, ask for it too, and follow "No rubric" in `rubric.md` when the user answers that there is none.
+Inputs carry over within a chat: the user often runs `assignment-create` first and asks for the review later in the same chat. Reuse every input the user already sent in this chat for this assignment: the question, the instructions, the rubric (or the answer that there is none), the course material, the user's copy of any outside source, and the output format. When the user sends no new draft, review the latest version of the assignment in the chat, such as the assignment document from `assignment-create`. Right after the resource check line, list in one line what you took from earlier in the chat, including the draft if it came from there, so the user can correct it.
+
+If the draft or the question is still missing, ask for it. If the rubric is missing, ask for it too, and follow "No rubric" in `rubric.md` when the user answers that there is none.
 
 ## Steps
 
