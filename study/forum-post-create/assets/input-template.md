@@ -26,7 +26,7 @@ Minimum citations: [e.g., 2]
 ```
 
 ## Course material (this unit first: paste the text with page numbers, or upload the files, not just titles)
-Links and uploads are fine. Claude opens every item before it starts, and stops if any one cannot be read. For a video, add its transcript. For a page on the course site, or anything else behind a login, paste the text or upload the file. Every evidence note quotes its source, but a page opened from a link can be quoted only once per reply, so paste the text or upload the file to get a quote on every note. In the plan, Claude lists every source it will cite, including outside sources it finds, and asks for the file for each one it has only as a link.
+Links and uploads are fine. Claude opens every item before it starts, and stops if any one cannot be read. If you upload a file or paste the text of a source (the book, or a page you also give as a link), Claude reads only your copy: it does not search the internet for that source or open its link. For a video, add its transcript. For a page on the course site, or anything else behind a login, paste the text or upload the file. Every evidence note quotes its source, but a page opened from a link can be quoted only once per reply, so paste the text or upload the file to get a quote on every note. In the plan, Claude lists every source it will cite, including outside sources it finds, and asks for the file for each one it has only as a link.
 ```
 
 ```

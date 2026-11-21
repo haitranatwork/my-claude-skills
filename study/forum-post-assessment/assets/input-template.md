@@ -20,7 +20,7 @@ Copy this, fill in what you have, and paste it into a new chat. Assess one class
 ```
 
 ## Course material (this unit, plus anything the classmate's post cites: paste the text with page numbers, or upload the files)
-Claude opens every item before it starts, and stops if any one cannot be read. In the same chat, material that already passed is not checked again.
+Claude opens every item before it starts, and stops if any one cannot be read. If you upload a file or paste the text of a source (the book, or a page you also give as a link), Claude reads only your copy: it does not search the internet for that source or open its link. In the same chat, material that already passed is not checked again.
 ```
 
 ```

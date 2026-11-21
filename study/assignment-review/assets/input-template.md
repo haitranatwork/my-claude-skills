@@ -27,7 +27,7 @@ Output format for the corrected assignment: [Markdown or Word; leave blank and C
 ```
 
 ## Course material (the material your draft cites: paste the text with page numbers, or upload the files)
-Claude opens every item before it starts, and stops if any one cannot be read. For a video, add its transcript. For a page on the course site, or anything else behind a login, paste the text or upload the file.
+Claude opens every item before it starts, and stops if any one cannot be read. If you upload a file or paste the text of a source (the book, or a page you also give as a link), Claude reads only your copy: it does not search the internet for that source or open its link. For a video, add its transcript. For a page on the course site, or anything else behind a login, paste the text or upload the file.
 ```
 
 ```

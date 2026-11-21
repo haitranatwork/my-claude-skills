@@ -5,12 +5,16 @@ Run this before anything else: before reading the rubric, and before a plan, a d
 ## What to check
 
 - every file the user uploads or points to, of any type (PDF, Word, PowerPoint, image, and others): course material, the rubric, the instructions, a classmate's post, or a draft sent as a file. Files in a claude.ai Project's knowledge count as uploads;
-- every link: readings, web pages, and videos;
+- every link: readings, web pages, and videos, except the link of a source that has a user's copy (see "The user's copy" below);
 - all pasted course material: readings, lecture notes, and slides;
 - every reading or video that the discussion question or the instructions name for this task, even if the user did not supply it;
 - any extra items your SKILL.md names for its task.
 
 Course material is what the question, the instructions, or the user name as course material. Other sources are outside sources, and they are not part of this check: a web page you find yourself follows the steps in `sources.md`, and an outside source cited in a post you review or grade is checked during that review or assessment.
+
+## The user's copy
+
+A file the user uploads or points to, or text the user pastes, that holds the source itself (such as the textbook, an article, or a page behind a link) is the **user's copy** of that source. At every step, read a source that has a user's copy only in that copy, and stay offline for it: never search the web for it, look up its details online, or open its link, even when the user also gives the link. Check and quote the copy, and take the source's reference details from it. When the reference uses the link, copy it as the user gave it. A copy that stops before the part the task needs fails this check like any other item, and its link is no fallback.
 
 ## How to check
 

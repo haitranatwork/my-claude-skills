@@ -44,6 +44,10 @@ _Avoid_: topic knowledge, course resource, readings
 Any source that is not course material.
 _Avoid_: external source, web source
 
+**User's copy**:
+A file the user uploads, or text the user pastes, that holds a source itself, such as the textbook or a page behind a link. Claude reads that source only in this copy and never goes online for it, so even the resource check leaves its link unopened.
+_Avoid_: source file
+
 **Resource check**:
 The gate before any work starts: every file, link, and pasted text the user gives, and every course material the task names, must open and read in full.
 

@@ -84,7 +84,7 @@ In the chat:
 When the user pastes a reply they wrote or edited and asks to check it:
 1. **Inputs.** The reply, and the post it answers (with the thread above it, for a reply further down a thread). Ask for the post if it is missing.
 2. **Resource check.** Run it as in step 1, and also check every course material the reply cites.
-3. **Review** the reply against "What a good reply does," and against `language.md`, `voice-sample.md`, `apa7.md`, and `sources.md` in `references/`. Open each web source the reply cites, or say that you could not.
+3. **Review** the reply against "What a good reply does," and against `language.md`, `voice-sample.md`, `apa7.md`, and `sources.md` in `references/`. For a source with a user's copy, use that copy alone (see `resource-check.md`); open each other web source the reply cites, or say that you could not.
 4. **Deliver**, in this order:
    - a verdict: Ready to post, Ready after small edits, or Needs one more pass, in one sentence;
    - numbered suggestions in order of impact, each giving the exact sentence, the fixed sentence in the user's voice, and a short reason. A flag goes in the reason, never in the fixed sentence. If the reply is already good, say so briefly and stop;
