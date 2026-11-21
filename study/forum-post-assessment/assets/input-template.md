@@ -1,6 +1,6 @@
 # Input template: assess a classmate's initial post
 
-Copy this, fill in what you have, and paste it into a new chat. Assess one classmate per message: for the next classmate, send a new message with their post.
+Copy this, fill in what you have, and paste it into a new chat. Assess one classmate per message: for the next classmate, send a new message with their post. In a chat that already has the other parts, such as the chat where Claude wrote your initial post, send only the classmate's post and any part that changed, or name a classmate whose full post is already in the chat.
 
 ---
 

@@ -1,6 +1,6 @@
 # Input template: reply to classmates
 
-Copy this, fill in what you have, and paste it into a new chat. Leave a field blank if it does not apply.
+Copy this, fill in what you have, and paste it into a new chat. Leave a field blank if it does not apply. In a chat that already has some of these parts, such as the chat where Claude wrote your initial post, send only what is new, usually the threads.
 
 ---
 

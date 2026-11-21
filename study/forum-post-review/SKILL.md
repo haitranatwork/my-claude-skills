@@ -15,13 +15,15 @@ The user fills in `assets/input-template.md`, or pastes the same parts.
 - **Required:** the user's draft (the full post, with References), the discussion question, the rubric, and the course material the draft uses.
 - **Optional:** the assignment instructions (word count, citation minimum, formatting).
 
-If the draft or the question is missing, ask for it. For a missing rubric, follow "No rubric" in `rubric.md`.
+Inputs carry over within a chat: the user often runs `forum-post-create` first and asks for the review later in the same chat. Reuse every input the user already sent in this chat for this discussion: the question, the instructions, the rubric (or the answer that there is none), the course material, and the user's copy of any outside source. When the user sends no new draft, review the latest version of the initial post in the chat, such as the post file from `forum-post-create`. Right after the resource check line, list in one line what you took from earlier in the chat, including the draft if it came from there, so the user can correct it.
+
+If the draft or the question is still missing, ask for it. For a missing rubric, follow "No rubric" in `rubric.md`.
 
 ## Steps
 
 1. **Resource check.** Read `references/resource-check.md` and run it. Also check every course material the draft cites. Outside sources the draft cites are checked in step 3, not here.
 2. **Read the standards.** Read `references/rubric.md`, `references/strong-post.md`, `references/language.md`, `references/voice-sample.md`, `references/apa7.md`, and `references/sources.md`. Decode the rubric: the top band and the delta for each criterion.
-3. **Review the draft** in this order:
+3. **Review the draft** in this order. If the draft still holds evidence blocks, review the text only, and remind the user to delete the blocks before submitting.
    1. **Rubric:** mark each criterion Met, Weak, or Missing against its delta, with a one-line reason.
    2. **Requirements:** the word count, the citation minimum, the title, and the formatting rules in the instructions.
    3. **Question coverage:** number the parts of the question, and name any part that is missing or thin.

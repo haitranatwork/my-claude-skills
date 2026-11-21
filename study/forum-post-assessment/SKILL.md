@@ -11,11 +11,13 @@ Other forum tasks have their own skills: `forum-post-create` writes the user's i
 
 ## Inputs
 
-**One classmate post per prompt.** If a prompt holds more than one, ask which one to assess now; the user sends the next one in its own prompt.
+**One classmate post per prompt.** If a prompt holds or names more than one, ask which one to assess now; the user sends or names the next one in its own prompt.
 
 The user fills in `assets/input-template.md`, or pastes the same parts.
 - **Required:** the classmate's full initial post with its References, the discussion question, the rubric, and the course material.
 - **Optional:** the course's assessment instructions and scale (for example, "rate from 1 to 10"). With no scale, grade in rubric bands.
+
+Inputs carry over within a chat: the user often writes the initial post with `forum-post-create` and assesses classmates later in the same chat. Reuse every input the user already sent in this chat for this discussion: the question, the rubric (or the answer that there is none), the course material, the user's copy of any outside source, and the assessment instructions and scale, which the instructions sent earlier may already give. A classmate's post already in the chat, such as one from a thread sent for replies, is the post to assess when the user names it and it is there in full. Right after the resource check line, list in one line what you took from earlier in the chat, including the classmate's post if it came from there, so the user can correct it.
 
 ## Steps
 

@@ -1,6 +1,6 @@
 # Input template: review my initial post
 
-Copy this, fill in what you have, and paste it into a new chat. Leave a field blank if it does not apply.
+Copy this, fill in what you have, and paste it into a new chat. Leave a field blank if it does not apply. In a chat that already has these parts, such as the chat where Claude wrote your initial post, send only your draft and any part that changed.
 
 ---
 

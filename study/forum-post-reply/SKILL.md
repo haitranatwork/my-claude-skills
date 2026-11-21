@@ -15,7 +15,9 @@ The user fills in `assets/input-template.md`, or pastes the same parts.
 - **Required:** for each reply, the **thread** from the initial post down to the post being answered, with each post labeled (for example, Classmate 1, Me); and the course material.
 - **Optional:** the reply requirements (how many replies, words per reply, what each reply should address, any grading criteria for replies), and the user's own initial post, so replies can connect to it.
 
-Use the user's initial post only when the user pasted it; never guess what it said. With no reply requirements, write one reply per post given, 100 to 200 words each and shorter than the user's initial post. When the requirements include grading criteria, each reply meets their top band.
+Inputs carry over within a chat: the user often writes and reviews the initial post with `forum-post-create` and `forum-post-review`, and asks for replies later in the same chat. Reuse every input the user already sent in this chat for this discussion: the course material, the user's copy of any outside source, classmates' posts, and the reply requirements, which the instructions or the rubric sent earlier may already give. Right after the resource check line, list in one line what you took from earlier in the chat, including the user's initial post if it came from there, so the user can correct it.
+
+Use the user's initial post only when it is in the chat, in its latest version, such as the corrected post from `forum-post-review` or the post file from `forum-post-create`; never guess what it said. With no reply requirements, write one reply per post given, 100 to 200 words each and shorter than the user's initial post. When the requirements include grading criteria, each reply meets their top band.
 
 ## What a good reply does
 
@@ -82,7 +84,7 @@ In the chat:
 ## Review a reply the user wrote
 
 When the user pastes a reply they wrote or edited and asks to check it:
-1. **Inputs.** The reply, and the post it answers (with the thread above it, for a reply further down a thread). Ask for the post if it is missing.
+1. **Inputs.** The reply, and the post it answers (with the thread above it, for a reply further down a thread). Ask for the post if it is missing from the chat.
 2. **Resource check.** Run it as in step 1, and also check every course material the reply cites.
 3. **Review** the reply against "What a good reply does," and against `language.md`, `voice-sample.md`, `apa7.md`, and `sources.md` in `references/`. For a source with a user's copy, use that copy alone (see `resource-check.md`); open each other web source the reply cites, or say that you could not.
 4. **Deliver**, in this order:
