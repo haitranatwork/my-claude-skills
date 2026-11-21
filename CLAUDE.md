@@ -8,6 +8,8 @@ A personal collection of Claude skills. This file maps the skills the user creat
 | `ai-sdlc/` | Claude Code, in a workspace that includes the `knowledge-base` repo | The AI-Native SDLC chain, from a raw requirement to a reviewed ticket |
 | `create-docs/`, `update-docs/` | Any code repository | `create-docs` generates a `CLAUDE.md` and a `docs/` knowledge base; `update-docs` syncs them with later code changes |
 
+`_deprecated/` is the container for deprecated skills. It mirrors the layout of the folders above: `_deprecated/study/` holds the old one-skill `forum-post` and `written-assignment`, which the forum and assignment families supersede. Leave deprecated skills as they are, and do not add them to a build.
+
 These folders hold the source. To see or change what a skill does, read and edit its files here: a skill of the same name offered in the session is the installed copy, which can be older.
 
 ## `study/`
@@ -15,7 +17,6 @@ These folders hold the source. To see or change what a skill does, read and edit
 - **Forum family** (discussion forum posts): `forum-post-create` writes the user's initial post, `forum-post-review` reviews the user's own draft of one, `forum-post-assessment` grades a classmate's initial post, and `forum-post-reply` writes or checks the user's replies to classmates.
 - **Assignment family** (written assignments: essay, report, reflection paper, case study): `assignment-create` writes one, and `assignment-review` reviews the user's own draft.
 - `coding-assignment`: programming assignments. It is self-contained and outside the build.
-- `forum-post/` and `written-assignment/`: the one-skill originals that the two families supersede. Leave them as they are; the user deletes them.
 
 **Workflow.** The user runs a family's skills one after another in one claude.ai chat, and sends each input only once:
 
