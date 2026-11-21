@@ -17,6 +17,13 @@ These folders hold the source. To see or change what a skill does, read and edit
 - `coding-assignment`: programming assignments. It is self-contained and outside the build.
 - `forum-post/` and `written-assignment/`: the one-skill originals that the two families supersede. Leave them as they are; the user deletes them.
 
+**Workflow.** The user runs a family's skills one after another in one claude.ai chat, and sends each input only once:
+
+- Written assignment: `assignment-create`, then `assignment-review`.
+- Discussion forum: `forum-post-create`, then `forum-post-review`, then `forum-post-reply`, and sometimes `forum-post-assessment`.
+
+Each later skill reuses what the user already sent in the chat, and the files that earlier skills delivered, such as the post file: see the "Inputs carry over within a chat" paragraph in its Inputs section. When a skill's inputs or deliverables change, update that paragraph in the skills after it in the sequence. A new skill that joins a sequence gets the same paragraph.
+
 **Build.** `study/build.py` builds the family skills. It copies each family's shared rules from `study/shared/<family>/` into each skill's `references/`, checks each `SKILL.md` against claude.ai's upload rules, and writes one zip per skill to `study/dist/` (untracked) for the user to upload. Its `SKILLS` table lists the built skills and the shared files each one gets.
 
 - Edit a rule in `study/shared/<family>/`. In a family skill, every file in `references/` is a copy that the next build overwrites.
