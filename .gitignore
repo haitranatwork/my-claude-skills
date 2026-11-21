@@ -419,3 +419,6 @@ FodyWeavers.xsd
 
 # Study skill zips, built by study/build.py
 study/dist/
+
+# working files
+.scratch/
